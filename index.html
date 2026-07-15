@@ -314,15 +314,6 @@ left: 0;
 font-size: 16px;
 top: 6px;
 }
-.highlight-box {
-background: white;
-border-left: 4px solid var(--accent);
-padding: 12px 16px;
-border-radius: 8px;
-margin: 12px 0;
-font-size: 14px;
-}
-.highlight-box strong { color: var(--primary); }
 .key-point {
 background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 border: 2px solid #fbbf24;
@@ -708,7 +699,7 @@ gap: 16px !important;
 <span class="progress-widget-percentage" id="widgetPercentage">0%</span>
 </div>
 <div style="font-size: 10px; color: var(--text-muted); margin-bottom: 6px;">
-Виконано: <strong id="widgetTasks">0/18</strong>
+Виконано: <strong id="widgetTasks">0/17</strong>
 </div>
 <div class="progress-widget-mini-map" id="widgetMiniMap"></div>
 </div>
@@ -723,7 +714,6 @@ gap: 16px !important;
 </div>
 </div>
 </header>
-
 <!-- MAIN PAGE -->
 <main class="container hidden" id="mainPage">
 <div class="hero-unified">
@@ -765,7 +755,6 @@ gap: 16px !important;
 💡 <strong>Пам'ятай:</strong> Перша допомога — це шанс зберегти життя людини до прибуття медиків.
 </div>
 </main>
-
 <!-- STEP 1: STARTING TASK -->
 <main class="container hidden" id="step1Page">
 <div class="step-header">
@@ -807,13 +796,12 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 2: CONCEPT AND GOALS -->
 <main class="container hidden" id="step2Page">
 <div class="step-header">
 <div class="step-header-top">
 <h2 class="step-title">📖 Крок 2. Поняття і мета першої допомоги</h2>
-<span class="step-badge">3 завдання</span>
+<span class="step-badge">2 завдання</span>
 </div>
 <div class="progress-dots">
 <div class="progress-dot completed"></div>
@@ -894,68 +882,11 @@ gap: 16px !important;
 <button class="btn btn-secondary" onclick="showS2('s2Theory')">← Назад</button>
 <button class="btn btn-primary" onclick="checkS2Task1()">✓ Перевірити</button>
 <button class="btn btn-warning" onclick="retryS2Task1()">🔄 Спробувати ще раз</button>
-<button class="btn btn-success" onclick="showS2('s2Task2')">Далі: Завдання 2 →</button>
-</div>
-</section>
-<section class="card hidden" id="s2Task2">
-<h2>📝 Завдання 2. Впорядкуй пріоритети</h2>
-<div class="feedback feedback-warning mb-24">
-<strong>📌 Інструкція:</strong> Перетягни картки з цілями першої допомоги у правильному порядку — від найважливішої (1) до найменш пріоритетної (4).
-</div>
-<div class="drag-container">
-<div class="drag-source">
-<h4>📦 Цілі першої допомоги:</h4>
-<div id="s2DragItems2">
-<div class="drag-item" draggable="true" data-order="1">
-<div class="drag-item-step">?</div>
-<div>Підготувати до передачі медикам</div>
-</div>
-<div class="drag-item" draggable="true" data-order="2">
-<div class="drag-item-step">?</div>
-<div>Зменшити біль та страждання</div>
-</div>
-<div class="drag-item" draggable="true" data-order="3">
-<div class="drag-item-step">?</div>
-<div>Запобігти погіршенню стану</div>
-</div>
-<div class="drag-item" draggable="true" data-order="4">
-<div class="drag-item-step">?</div>
-<div>Зберегти життя</div>
-</div>
-</div>
-</div>
-<div class="drag-target">
-<h4>🔢 Пріоритети (1-найвищий):</h4>
-<div id="s2DropZones2">
-<div class="drop-zone" data-position="1">
-<div class="drop-zone-number">1</div>
-<div class="drop-zone-text">Перетягни сюди</div>
-</div>
-<div class="drop-zone" data-position="2">
-<div class="drop-zone-number">2</div>
-<div class="drop-zone-text">Перетягни сюди</div>
-</div>
-<div class="drop-zone" data-position="3">
-<div class="drop-zone-number">3</div>
-<div class="drop-zone-text">Перетягни сюди</div>
-</div>
-<div class="drop-zone" data-position="4">
-<div class="drop-zone-number">4</div>
-<div class="drop-zone-text">Перетягни сюди</div>
-</div>
-</div>
-</div>
-</div>
-<div id="s2Task2Feedback" class="feedback" style="display:none;"></div>
-<div class="navigation">
-<button class="btn btn-secondary" onclick="showS2('s2Task1')">← Назад</button>
-<button class="btn btn-primary" onclick="checkS2Task2()">✓ Перевірити</button>
-<button class="btn btn-warning" onclick="retryS2Task2()">🔄 Спробувати ще раз</button>
-<button class="btn btn-success" onclick="showS2('s2Task3')">Далі: Завдання 3 →</button>
+<button class="btn btn-success" onclick="showS2('s2Task3')">Далі: Завдання 2 →</button>
 </div>
 </section>
 <section class="card hidden" id="s2Task3">
-<h2>📝 Завдання 3. Критичний аналіз: час і статистика</h2>
+<h2>📝 Завдання 2. Критичний аналіз: час і статистика</h2>
 <div class="feedback feedback-warning mb-24">
 <strong>📌 Завдання:</strong> Проаналізуй твердження та обери ВСІ правильні.
 </div>
@@ -998,14 +929,13 @@ gap: 16px !important;
 </div>
 <div id="s2Task3Feedback" class="feedback" style="display:none;"></div>
 <div class="navigation">
-<button class="btn btn-secondary" onclick="showS2('s2Task2')">← Назад</button>
+<button class="btn btn-secondary" onclick="showS2('s2Task1')">← Назад</button>
 <button class="btn btn-primary" onclick="checkS2Task3()">✓ Перевірити</button>
 <button class="btn btn-warning" onclick="retryS2Task3()">🔄 Спробувати ще раз</button>
 <button class="btn btn-success" onclick="goToStep(3)">Далі: Крок 3 →</button>
 </div>
 </section>
 </main>
-
 <!-- STEP 3: PRINCIPLE 1 - SCENE ASSESSMENT -->
 <main class="container hidden" id="step3Page">
 <div class="step-header">
@@ -1122,7 +1052,7 @@ gap: 16px !important;
 <section class="card hidden" id="s3Task2">
 <h2>📝 Завдання 2. Аналіз помилки Дмитра</h2>
 <div class="feedback feedback-warning mb-24">
-<strong>📌 Ситуація:</strong> Дмитро йшов додому і побачив чоловіка, який лежав на тротуарі біля велосипеда. Хлопчик одразу підбіг, щоб надати допомогу. Тому він не помітив, що поруч були уламки скла й порізав ногу. Дмитро оглянув чоловіка та зрозумів, що той не дихає. Він викликав екстрену службу та почав кликати на допомогу.Яку помилку зробив Дмитро?
+<strong>📌 Ситуація:</strong> Дмитро йшов додому і побачив чоловіка, який лежав на тротуарі біля велосипеда. Хлопчик одразу підбіг, щоб надати допомогу. Тому він не помітив, що поруч були уламки скла й порізав ногу. Дмитро оглянув чоловіка та зрозумів, що той не дихає. Він викликав екстрену службу та почав кликати на допомогу. Яку помилку зробив Дмитро?
 </div>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;">
 <div class="image-container">
@@ -1165,7 +1095,7 @@ gap: 16px !important;
 <section class="card hidden" id="s3Task3">
 <h2>📝 Завдання 3. Класифікація загроз</h2>
 <div class="feedback feedback-warning mb-24">
-<strong>📌 Інструкція:</strong> Обери загрози, через які НЕ СЛІД наближатися до постраждалого.
+<strong>📌 Інструкція:</strong> Обери загрози, за яких наближатися до постраждалого НЕБЕЗПЕЧНО.
 </div>
 <div class="task-options" id="s3Task3Options">
 <div class="option" data-correct="true" onclick="toggleOption(this)" tabindex="0">
@@ -1198,7 +1128,7 @@ gap: 16px !important;
 </div>
 <div class="option" data-correct="false" onclick="toggleOption(this)" tabindex="0">
 <div class="option-checkbox"></div>
-<div class="option-text"><div class="option-label">🌳 Дерева поруч</div></div>
+<div class="option-text"><div class="option-label">🌳 Безвітряна погода</div></div>
 </div>
 </div>
 <div id="s3Task3Feedback" class="feedback" style="display:none;"></div>
@@ -1254,7 +1184,6 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 4: PRINCIPLE 2 - EXAMINATION -->
 <main class="container hidden" id="step4Page">
 <div class="step-header">
@@ -1278,42 +1207,41 @@ gap: 16px !important;
 <div class="theory-compact">
 <h4>👁️ Принцип 2: Проведення огляду постраждалого</h4>
 </div>
-<div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-blue) 0%, #bfdbfe 100%); border-color: #93c5fd;">
-<h4>🧠 1. Перевірка свідомості</h4>
+<div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-orange) 0%, #fed7aa 100%); border-color: #fb923c;">
+<h4>🔍 1. Огляд на кровотечі</h4>
 <ul>
-<li data-icon="💬"><strong>Запитайте</strong> постраждалого, чи потрібна допомога</li>
+<li data-icon="👀">Огляньте постраждалого від голови до ніг</li>
+<li data-icon="🚨"><strong>Негайно зупиніть</strong> масивну кровотечу</li>
+<li data-icon="👕">За потреби відкрийте або розріжте одяг</li>
+<li data-icon="🩸">Переконайтеся, що інших джерел сильної кровотечі немає</li>
+</ul>
+</div>
+<div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-blue) 0%, #bfdbfe 100%); border-color: #93c5fd;">
+<h4>🧠 2. Перевірка свідомості</h4>
+<ul>
+<li data-icon="💬"><strong>Голосно зверніться</strong> до постраждалого</li>
 <li data-icon="✋"><strong>Легенько потрусіть</strong> за плечі</li>
 <li data-icon="❌">Якщо немає реакції — людина непритомна</li>
 </ul>
 </div>
 <div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-green) 0%, #bbf7d0 100%); border-color: #86efac;">
-<h4>🫁 2. Забезпечення прохідності дихальних шляхів</h4>
+<h4>🫁 3. Забезпечення прохідності дихальних шляхів</h4>
 <ul>
 <li data-icon="👆">Підніміть підборіддя однією рукою</li>
-<li data-icon="🤚">Іншою рукою притримуйте чоло та закиньте голову назад</li>
+<li data-icon="🤚">Іншою рукою притримуйте чоло та обережно закиньте голову назад</li>
 </ul>
 </div>
 <div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-yellow) 0%, #fde68a 100%); border-color: #fbbf24;">
-<h4>🌬️ 3. Перевірка дихання — метод «Бачу — чую — відчуваю»</h4>
+<h4>🌬️ 4. Перевірка дихання — метод «Бачу — чую — відчуваю»</h4>
 <ul>
-<li data-icon="👁️"><strong>Бачу:</strong> чи підіймається грудна клітина</li>
-<li data-icon="👂"><strong>Чую:</strong> чи чую дихання</li>
-<li data-icon="✋"><strong>Відчуваю:</strong> чи відчуваю подих шкірою</li>
+<li data-icon="👁️"><strong>Бачу:</strong> чи підіймається грудна клітка</li>
+<li data-icon="👂"><strong>Чую:</strong> чи є звуки дихання</li>
+<li data-icon="✋"><strong>Відчуваю:</strong> чи відчуваю подих щокою</li>
 </ul>
-<p><strong>Час перевірки:</strong> 10 секунд</p>
-</div>
-<div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-red) 0%, #fecaca 100%); border-color: #fca5a5;">
-<h4>🩸 4. Огляд на кровотечі</h4>
-<ul>
-<li data-icon="🔍">Перевірте від голови до ніг</li>
-<li data-icon="🚨">Рясна кровотеча — першочергове завдання</li>
-</ul>
+<p><strong>Час перевірки:</strong> до 10 секунд</p>
 </div>
 <div class="key-point">
 💡 Якщо людина дихає — покладіть у стабільне бокове положення. Якщо не дихає — проводьте серцево-легеневу реанімацію.
-</div>
-<div class="image-container">
-<img src="https://res.cloudinary.com/dmydvhkzr/image/upload/v1783877780/06_aeh6pa.png" alt="Огляд постраждалого"> 
 </div>
 <div class="navigation">
 <button class="btn btn-secondary" onclick="goToMainPage()">← До змісту</button>
@@ -1329,19 +1257,19 @@ gap: 16px !important;
 <div class="drag-source">
 <h4>📦 Етапи огляду:</h4>
 <div id="s4DragItems1">
-<div class="drag-item" draggable="true" data-step="3">
+<div class="drag-item" draggable="true" data-step="4">
 <div class="drag-item-step">?</div>
 <div>Перевірити дихання методом «Бачу — чую — відчуваю»</div>
 </div>
-<div class="drag-item" draggable="true" data-step="1">
+<div class="drag-item" draggable="true" data-step="2">
 <div class="drag-item-step">?</div>
 <div>Перевірити свідомість (запитати, потрусити за плечі)</div>
 </div>
-<div class="drag-item" draggable="true" data-step="4">
+<div class="drag-item" draggable="true" data-step="1">
 <div class="drag-item-step">?</div>
 <div>Оглянути на наявність кровотеч</div>
 </div>
-<div class="drag-item" draggable="true" data-step="2">
+<div class="drag-item" draggable="true" data-step="3">
 <div class="drag-item-step">?</div>
 <div>Забезпечити прохідність дихальних шляхів</div>
 </div>
@@ -1492,7 +1420,6 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 5: PRINCIPLE 3 - CALLING EMERGENCY SERVICES -->
 <main class="container hidden" id="step5Page">
 <div class="step-header">
@@ -1675,7 +1602,6 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 6: PRINCIPLE 4 - PROVIDING FIRST AID -->
 <main class="container hidden" id="step6Page">
 <div class="step-header">
@@ -1798,19 +1724,19 @@ gap: 16px !important;
 <div class="task-options" id="s6Task2Options">
 <div class="option" data-correct="true" onclick="toggleOption(this)" tabindex="0">
 <div class="option-checkbox"></div>
-<div class="option-text"><div class="option-label">🧤 Одноразові рукавички</div></div>
+<div class="option-text"><div class="option-label">Одноразові рукавички</div></div>
 </div>
 <div class="option" data-correct="true" onclick="toggleOption(this)" tabindex="0">
 <div class="option-checkbox"></div>
-<div class="option-text"><div class="option-label">😷 Маску з клапаном для штучного дихання</div></div>
+<div class="option-text"><div class="option-label">Маску з клапаном для штучного дихання</div></div>
 </div>
 <div class="option" data-correct="false" onclick="toggleOption(this)" tabindex="0">
 <div class="option-checkbox"></div>
-<div class="option-text"><div class="option-label">🧤 Звичайні тканинні рукавички</div></div>
+<div class="option-text"><div class="option-label">Сонцезахисні окуляри</div></div>
 </div>
 <div class="option" data-correct="false" onclick="toggleOption(this)" tabindex="0">
 <div class="option-checkbox"></div>
-<div class="option-text"><div class="option-label">👕 Свій одяг як захист</div></div>
+<div class="option-text"><div class="option-label">Наколінники</div></div>
 </div>
 </div>
 <div id="s6Task2Feedback" class="feedback" style="display:none;"></div>
@@ -1858,7 +1784,6 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 7: COURSES AND RESOURCES (ONLY THEORY) -->
 <main class="container hidden" id="step7Page">
 <div class="step-header">
@@ -1885,10 +1810,13 @@ gap: 16px !important;
 </div>
 <div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-blue) 0%, #bfdbfe 100%); border-color: #93c5fd;">
 <h4>🏥 Товариство Червоного Хреста України</h4>
-<p>Провели тренінги для понад 400 000 осіб починаючи з 2022 року. А нещодавно організація запустила безкоштовний застосунок «Перша допомога Червоного Хреста».</p>
+<p>Понад 400 000 людей уже пройшли навчання з домедичної допомоги. Для самостійного навчання скористайтеся безкоштовним застосунком <strong>«Перша допомога Червоного Хреста»</strong>.</p>
 </div>
-<a href="https://is.gd/tAL5eu" target="_blank" class="resource-link">
-🔗 Тренінги з першої допомоги від Червоного Хреста
+<a href="https://play.google.com/store/apps/details?id=com.cube.gdpc.fa&hl=uk" target="_blank" class="resource-link">
+📱 Завантажити для Android (Google Play)
+</a>
+<a href="https://apps.apple.com/ua/app/%D0%BF%D0%B5%D1%80%D1%88%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0-%D1%87%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%BE%D0%B3%D0%BE-%D1%85%D1%80%D0%B5%D1%81%D1%82/id1312876691?l=uk" target="_blank" class="resource-link">
+🍎 Завантажити для iPhone (App Store)
 </a>
 <div class="theory-compact" style="background: linear-gradient(135deg, var(--theory-green) 0%, #bbf7d0 100%); border-color: #86efac;">
 <h4>💻 Онлайн-курси</h4>
@@ -1900,13 +1828,11 @@ gap: 16px !important;
 <a href="https://is.gd/eOdUt0" target="_blank" class="resource-link">
 🎓 Курс на Прометеус
 </a>
-</ul>
-</div>
 <a href="https://study.ed-era.com/uk/courses/course/5145" target="_blank" class="resource-link">
 🎓 Курс на ЕдЕра
 </a>
 <div class="key-point">
-💡Кожен може обрати доступний спосіб навчання — онлайн або за допомогою мобільних застосунків!
+💡 Кожен може обрати доступний спосіб навчання — онлайн або за допомогою мобільних застосунків!
 </div>
 <div class="navigation">
 <button class="btn btn-secondary" onclick="goToMainPage()">← До змісту</button>
@@ -1914,7 +1840,6 @@ gap: 16px !important;
 </div>
 </section>
 </main>
-
 <!-- STEP 8: SELF-ASSESSMENT -->
 <main class="container hidden" id="step8Page">
 <div class="step6-header">
@@ -1967,7 +1892,7 @@ gap: 16px !important;
 </div>
 <div class="stats-grid">
 <div class="stat-card">
-<div class="stat-value" id="statTasks">0/18</div>
+<div class="stat-value" id="statTasks">0/17</div>
 <div class="stat-label">✅ Виконано завдань</div>
 </div>
 <div class="stat-card">
@@ -2014,7 +1939,6 @@ gap: 16px !important;
 <button class="btn btn-primary" onclick="goToMainPage()">🏠 На головну</button>
 </div>
 </main>
-
 <!-- MODALS -->
 <div class="modal-overlay" id="progressModal" role="dialog" aria-modal="true" aria-labelledby="progressTitle">
 <div class="modal">
@@ -2027,7 +1951,7 @@ gap: 16px !important;
 <h3 style="color: var(--primary); margin-bottom: 24px;" id="modalLevelName">Початківець</h3>
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px;">
 <div style="background: var(--bg); padding: 14px; border-radius: 12px;">
-<div style="font-size: 24px; font-weight: 700; color: var(--accent);" id="modalTasks">0/18</div>
+<div style="font-size: 24px; font-weight: 700; color: var(--accent);" id="modalTasks">0/17</div>
 <div style="font-size: 12px; color: var(--text-muted);">Завдань</div>
 </div>
 <div style="background: var(--bg); padding: 14px; border-radius: 12px;">
@@ -2052,7 +1976,6 @@ gap: 16px !important;
 </div>
 </div>
 </div>
-
 <div class="modal-overlay" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
 <div class="modal">
 <div class="modal-header">
@@ -2080,7 +2003,6 @@ gap: 16px !important;
 <button class="btn btn-primary mt-24" onclick="closeModal('helpModal')" style="width: 100%;">Зрозуміло!</button>
 </div>
 </div>
-
 <script>
 let draggedItem = null;
 let draggedClone = null;
@@ -2088,1390 +2010,1233 @@ let currentDropTarget = null;
 let touchOffsetX = 0;
 let touchOffsetY = 0;
 const tfSelections = {};
-
 function initUniversalDragDrop(dragContainerId, dropZones, dropHandler) {
-  const dragItems = document.querySelectorAll(`#${dragContainerId} .drag-item`);
-  const zones = typeof dropZones === 'string'
-    ? document.querySelectorAll(dropZones)
-    : dropZones;
-  dragItems.forEach(item => {
-    item.addEventListener('dragstart', dragStart);
-    item.addEventListener('dragend', dragEnd);
-    item.addEventListener('touchstart', touchStart, { passive: false });
-    item.addEventListener('touchmove', touchMove, { passive: false });
-    item.addEventListener('touchend', touchEnd, { passive: false });
-  });
-  zones.forEach(zone => {
-    zone.addEventListener('dragover', dragOver);
-    zone.addEventListener('dragleave', dragLeave);
-    zone.addEventListener('drop', (e) => dropHandler.call(zone, e));
-    zone._dropHandler = dropHandler;
-  });
+const dragItems = document.querySelectorAll(`#${dragContainerId} .drag-item`);
+const zones = typeof dropZones === 'string'
+? document.querySelectorAll(dropZones)
+: dropZones;
+dragItems.forEach(item => {
+item.addEventListener('dragstart', dragStart);
+item.addEventListener('dragend', dragEnd);
+item.addEventListener('touchstart', touchStart, { passive: false });
+item.addEventListener('touchmove', touchMove, { passive: false });
+item.addEventListener('touchend', touchEnd, { passive: false });
+});
+zones.forEach(zone => {
+zone.addEventListener('dragover', dragOver);
+zone.addEventListener('dragleave', dragLeave);
+zone.addEventListener('drop', (e) => dropHandler.call(zone, e));
+zone._dropHandler = dropHandler;
+});
 }
-
 function dragStart(e) {
-  draggedItem = this;
-  setTimeout(() => this.classList.add('dragging'), 0);
+draggedItem = this;
+setTimeout(() => this.classList.add('dragging'), 0);
 }
-
 function dragEnd(e) {
-  this.classList.remove('dragging');
-  draggedItem = null;
+this.classList.remove('dragging');
+draggedItem = null;
 }
-
 function dragOver(e) { e.preventDefault(); this.classList.add('drag-over'); }
 function dragLeave(e) { this.classList.remove('drag-over'); }
-
 function touchStart(e) {
-  e.preventDefault();
-  draggedItem = this;
-  const touch = e.touches[0];
-  const rect = this.getBoundingClientRect();
-  touchOffsetX = touch.clientX - rect.left;
-  touchOffsetY = touch.clientY - rect.top;
-  draggedClone = this.cloneNode(true);
-  draggedClone.style.position = 'fixed';
-  draggedClone.style.left = (touch.clientX - touchOffsetX) + 'px';
-  draggedClone.style.top = (touch.clientY - touchOffsetY) + 'px';
-  draggedClone.style.width = rect.width + 'px';
-  draggedClone.style.zIndex = '9999';
-  draggedClone.style.opacity = '0.85';
-  draggedClone.style.pointerEvents = 'none';
-  draggedClone.style.transform = 'rotate(2deg) scale(1.05)';
-  document.body.appendChild(draggedClone);
-  this.style.opacity = '0.3';
+e.preventDefault();
+draggedItem = this;
+const touch = e.touches[0];
+const rect = this.getBoundingClientRect();
+touchOffsetX = touch.clientX - rect.left;
+touchOffsetY = touch.clientY - rect.top;
+draggedClone = this.cloneNode(true);
+draggedClone.style.position = 'fixed';
+draggedClone.style.left = (touch.clientX - touchOffsetX) + 'px';
+draggedClone.style.top = (touch.clientY - touchOffsetY) + 'px';
+draggedClone.style.width = rect.width + 'px';
+draggedClone.style.zIndex = '9999';
+draggedClone.style.opacity = '0.85';
+draggedClone.style.pointerEvents = 'none';
+draggedClone.style.transform = 'rotate(2deg) scale(1.05)';
+document.body.appendChild(draggedClone);
+this.style.opacity = '0.3';
 }
-
 function touchMove(e) {
-  e.preventDefault();
-  if (!draggedClone) return;
-  const touch = e.touches[0];
-  draggedClone.style.left = (touch.clientX - touchOffsetX) + 'px';
-  draggedClone.style.top = (touch.clientY - touchOffsetY) + 'px';
-  draggedClone.style.display = 'none';
-  const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
-  draggedClone.style.display = '';
-  const zone = elementBelow ? elementBelow.closest('.drop-zone') : null;
-  document.querySelectorAll('.drop-zone.drag-over').forEach(z => {
-    if (z !== zone) z.classList.remove('drag-over');
-  });
-  if (zone) { zone.classList.add('drag-over'); currentDropTarget = zone; }
-  else { currentDropTarget = null; }
+e.preventDefault();
+if (!draggedClone) return;
+const touch = e.touches[0];
+draggedClone.style.left = (touch.clientX - touchOffsetX) + 'px';
+draggedClone.style.top = (touch.clientY - touchOffsetY) + 'px';
+draggedClone.style.display = 'none';
+const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+draggedClone.style.display = '';
+const zone = elementBelow ? elementBelow.closest('.drop-zone') : null;
+document.querySelectorAll('.drop-zone.drag-over').forEach(z => {
+if (z !== zone) z.classList.remove('drag-over');
+});
+if (zone) { zone.classList.add('drag-over'); currentDropTarget = zone; }
+else { currentDropTarget = null; }
 }
-
 function touchEnd(e) {
-  e.preventDefault();
-  if (!draggedItem) return;
-  if (draggedClone) { draggedClone.remove(); draggedClone = null; }
-  draggedItem.style.opacity = '';
-  if (currentDropTarget) {
-    currentDropTarget.classList.remove('drag-over');
-    const dropHandler = currentDropTarget._dropHandler || dropGeneric;
-    dropHandler.call(currentDropTarget, { preventDefault: () => {} });
-  }
-  draggedItem = null;
-  currentDropTarget = null;
+e.preventDefault();
+if (!draggedItem) return;
+if (draggedClone) { draggedClone.remove(); draggedClone = null; }
+draggedItem.style.opacity = '';
+if (currentDropTarget) {
+currentDropTarget.classList.remove('drag-over');
+const dropHandler = currentDropTarget._dropHandler || dropGeneric;
+dropHandler.call(currentDropTarget, { preventDefault: () => {} });
 }
-
+draggedItem = null;
+currentDropTarget = null;
+}
 function dropGeneric(e) {}
-
 const stepTracker = {
-  step1: { total: 1, completed: 0, tasks: { task1: false } },
-  step2: { total: 3, completed: 0, tasks: { task1: false, task2: false, task3: false } },
-  step3: { total: 4, completed: 0, tasks: { task1: false, task2: false, task3: false, task4: false } },
-  step4: { total: 4, completed: 0, tasks: { task1: false, task2: false, task3: false, task4: false } },
-  step5: { total: 3, completed: 0, tasks: { task1: false, task2: false, task3: false } },
-  step6: { total: 3, completed: 0, tasks: { task1: false, task2: false, task3: false } },
-  step7: { total: 0, completed: 0, tasks: {} }
+step1: { total: 1, completed: 0, tasks: { task1: false } },
+step2: { total: 2, completed: 0, tasks: { task1: false, task3: false } },
+step3: { total: 4, completed: 0, tasks: { task1: false, task2: false, task3: false, task4: false } },
+step4: { total: 4, completed: 0, tasks: { task1: false, task2: false, task3: false, task4: false } },
+step5: { total: 3, completed: 0, tasks: { task1: false, task2: false, task3: false } },
+step6: { total: 3, completed: 0, tasks: { task1: false, task2: false, task3: false } },
+step7: { total: 0, completed: 0, tasks: {} }
 };
-
 const stepsCompleted = { 1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false };
 const progressTracker = { correct: 0, total: 0, answered: new Set() };
 const state = { currentStep: 0, selfRatings: [0, 0, 0, 0] };
-
 function addCorrect(taskId) {
-  if (progressTracker.answered.has(taskId)) return false;
-  progressTracker.answered.add(taskId);
-  progressTracker.correct++;
-  progressTracker.total++;
-  updateStepTrackerFromTask(taskId, true);
-  updateLiveProgress();
-  saveProgress();
-  return true;
+if (progressTracker.answered.has(taskId)) return false;
+progressTracker.answered.add(taskId);
+progressTracker.correct++;
+progressTracker.total++;
+updateStepTrackerFromTask(taskId, true);
+updateLiveProgress();
+saveProgress();
+return true;
 }
-
 function updateStepTrackerFromTask(taskId, isCorrect) {
-  if (taskId === 'step1_task1') { stepTracker.step1.tasks.task1 = true; updateStepProgress(1); }
-  if (taskId === 'step2_task1') { stepTracker.step2.tasks.task1 = true; updateStepProgress(2); }
-  if (taskId === 'step2_task2') { stepTracker.step2.tasks.task2 = true; updateStepProgress(2); }
-  if (taskId === 'step2_task3') { stepTracker.step2.tasks.task3 = true; updateStepProgress(2); }
-  if (taskId === 'step3_task1') { stepTracker.step3.tasks.task1 = true; updateStepProgress(3); }
-  if (taskId === 'step3_task2') { stepTracker.step3.tasks.task2 = true; updateStepProgress(3); }
-  if (taskId === 'step3_task3') { stepTracker.step3.tasks.task3 = true; updateStepProgress(3); }
-  if (taskId === 'step3_task4') { stepTracker.step3.tasks.task4 = true; updateStepProgress(3); }
-  if (taskId === 'step4_task1') { stepTracker.step4.tasks.task1 = true; updateStepProgress(4); }
-  if (taskId === 'step4_task2') { stepTracker.step4.tasks.task2 = true; updateStepProgress(4); }
-  if (taskId === 'step4_task3') { stepTracker.step4.tasks.task3 = true; updateStepProgress(4); }
-  if (taskId === 'step4_task4') { stepTracker.step4.tasks.task4 = true; updateStepProgress(4); }
-  if (taskId === 'step5_task1') { stepTracker.step5.tasks.task1 = true; updateStepProgress(5); }
-  if (taskId === 'step5_task2') { stepTracker.step5.tasks.task2 = true; updateStepProgress(5); }
-  if (taskId === 'step5_task3') { stepTracker.step5.tasks.task3 = true; updateStepProgress(5); }
-  if (taskId === 'step6_task1') { stepTracker.step6.tasks.task1 = true; updateStepProgress(6); }
-  if (taskId === 'step6_task2') { stepTracker.step6.tasks.task2 = true; updateStepProgress(6); }
-  if (taskId === 'step6_task3') { stepTracker.step6.tasks.task3 = true; updateStepProgress(6); }
+if (taskId === 'step1_task1') { stepTracker.step1.tasks.task1 = true; updateStepProgress(1); }
+if (taskId === 'step2_task1') { stepTracker.step2.tasks.task1 = true; updateStepProgress(2); }
+if (taskId === 'step2_task3') { stepTracker.step2.tasks.task3 = true; updateStepProgress(2); }
+if (taskId === 'step3_task1') { stepTracker.step3.tasks.task1 = true; updateStepProgress(3); }
+if (taskId === 'step3_task2') { stepTracker.step3.tasks.task2 = true; updateStepProgress(3); }
+if (taskId === 'step3_task3') { stepTracker.step3.tasks.task3 = true; updateStepProgress(3); }
+if (taskId === 'step3_task4') { stepTracker.step3.tasks.task4 = true; updateStepProgress(3); }
+if (taskId === 'step4_task1') { stepTracker.step4.tasks.task1 = true; updateStepProgress(4); }
+if (taskId === 'step4_task2') { stepTracker.step4.tasks.task2 = true; updateStepProgress(4); }
+if (taskId === 'step4_task3') { stepTracker.step4.tasks.task3 = true; updateStepProgress(4); }
+if (taskId === 'step4_task4') { stepTracker.step4.tasks.task4 = true; updateStepProgress(4); }
+if (taskId === 'step5_task1') { stepTracker.step5.tasks.task1 = true; updateStepProgress(5); }
+if (taskId === 'step5_task2') { stepTracker.step5.tasks.task2 = true; updateStepProgress(5); }
+if (taskId === 'step5_task3') { stepTracker.step5.tasks.task3 = true; updateStepProgress(5); }
+if (taskId === 'step6_task1') { stepTracker.step6.tasks.task1 = true; updateStepProgress(6); }
+if (taskId === 'step6_task2') { stepTracker.step6.tasks.task2 = true; updateStepProgress(6); }
+if (taskId === 'step6_task3') { stepTracker.step6.tasks.task3 = true; updateStepProgress(6); }
 }
-
 function updateStepProgress(stepNum) {
-  const step = stepTracker['step' + stepNum];
-  const completedTasks = Object.values(step.tasks).filter(v => v).length;
-  step.completed = completedTasks;
-  if (completedTasks === step.total && !stepsCompleted[stepNum]) {
-    stepsCompleted[stepNum] = true;
-    showToast(`🎉 Крок ${stepNum} завершено!`, '🏆');
-  }
-  updateStep8Display();
+const step = stepTracker['step' + stepNum];
+const completedTasks = Object.values(step.tasks).filter(v => v).length;
+step.completed = completedTasks;
+if (completedTasks === step.total && !stepsCompleted[stepNum]) {
+stepsCompleted[stepNum] = true;
+showToast(`🎉 Крок ${stepNum} завершено!`, '🏆');
 }
-
+updateStep8Display();
+}
 function updateLiveProgress() {
-  const totalTasks = 18;
-  let completedTasks = 0;
-  for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
-  const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
-  const topBar = document.getElementById('topProgressBar');
-  if (topBar) topBar.style.width = percent + '%';
-  const widgetPercent = document.getElementById('widgetPercentage');
-  const widgetTasks = document.getElementById('widgetTasks');
-  if (widgetPercent) widgetPercent.textContent = percent + '%';
-  if (widgetTasks) widgetTasks.textContent = `${completedTasks}/${totalTasks}`;
-  const miniMap = document.getElementById('widgetMiniMap');
-  if (miniMap) {
-    miniMap.innerHTML = '';
-    for (let i = 1; i <= 7; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'mini-step';
-      dot.textContent = i;
-      if (stepsCompleted[i]) { dot.classList.add('completed'); dot.innerHTML = '✓'; }
-      else if (state.currentStep === i) { dot.classList.add('current'); }
-      miniMap.appendChild(dot);
-    }
-  }
-  renderStepNavigation();
-  updateStep8Display();
+const totalTasks = 17;
+let completedTasks = 0;
+for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
+const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
+const topBar = document.getElementById('topProgressBar');
+if (topBar) topBar.style.width = percent + '%';
+const widgetPercent = document.getElementById('widgetPercentage');
+const widgetTasks = document.getElementById('widgetTasks');
+if (widgetPercent) widgetPercent.textContent = percent + '%';
+if (widgetTasks) widgetTasks.textContent = `${completedTasks}/${totalTasks}`;
+const miniMap = document.getElementById('widgetMiniMap');
+if (miniMap) {
+miniMap.innerHTML = '';
+for (let i = 1; i <= 7; i++) {
+const dot = document.createElement('div');
+dot.className = 'mini-step';
+dot.textContent = i;
+if (stepsCompleted[i]) { dot.classList.add('completed'); dot.innerHTML = '✓'; }
+else if (state.currentStep === i) { dot.classList.add('current'); }
+miniMap.appendChild(dot);
 }
-
+}
+renderStepNavigation();
+updateStep8Display();
+}
 function loadProgress() {
-  const saved = localStorage.getItem('section8Progress_v3');
-  if (saved) {
-    try {
-      const data = JSON.parse(saved);
-      if (data.progressTracker) {
-        progressTracker.correct = data.progressTracker.correct || 0;
-        progressTracker.total = data.progressTracker.total || 0;
-        progressTracker.answered = new Set(data.progressTracker.answered || []);
-      }
-      if (data.stepTracker) {
-        for (let i = 1; i <= 7; i++) {
-          if (data.stepTracker['step' + i]) {
-            stepTracker['step' + i].completed = data.stepTracker['step' + i].completed || 0;
-            stepTracker['step' + i].tasks = data.stepTracker['step' + i].tasks || stepTracker['step' + i].tasks;
-          }
-        }
-      }
-      if (data.stepsCompleted) {
-        for (let i = 1; i <= 7; i++) stepsCompleted[i] = data.stepsCompleted[i] || false;
-      }
-      if (data.state) {
-        state.currentStep = data.state.currentStep || 0;
-        state.selfRatings = data.state.selfRatings || [0, 0, 0, 0];
-      }
-    } catch (e) { console.error('Помилка завантаження:', e); }
-  }
-  updateLiveProgress();
-  renderStepNavigation();
+const saved = localStorage.getItem('section8Progress_v4');
+if (saved) {
+try {
+const data = JSON.parse(saved);
+if (data.progressTracker) {
+progressTracker.correct = data.progressTracker.correct || 0;
+progressTracker.total = data.progressTracker.total || 0;
+progressTracker.answered = new Set(data.progressTracker.answered || []);
 }
-
+if (data.stepTracker) {
+for (let i = 1; i <= 7; i++) {
+if (data.stepTracker['step' + i]) {
+stepTracker['step' + i].completed = data.stepTracker['step' + i].completed || 0;
+stepTracker['step' + i].tasks = data.stepTracker['step' + i].tasks || stepTracker['step' + i].tasks;
+}
+}
+}
+if (data.stepsCompleted) {
+for (let i = 1; i <= 7; i++) stepsCompleted[i] = data.stepsCompleted[i] || false;
+}
+if (data.state) {
+state.currentStep = data.state.currentStep || 0;
+state.selfRatings = data.state.selfRatings || [0, 0, 0, 0];
+}
+} catch (e) { console.error('Помилка завантаження:', e); }
+}
+updateLiveProgress();
+renderStepNavigation();
+}
 function saveProgress() {
-  const data = {
-    progressTracker: {
-      correct: progressTracker.correct,
-      total: progressTracker.total,
-      answered: Array.from(progressTracker.answered)
-    },
-    stepTracker: stepTracker,
-    stepsCompleted: stepsCompleted,
-    state: state
-  };
-  sessionStorage.setItem('section8Progress_v3', JSON.stringify(data));
+const data = {
+progressTracker: {
+correct: progressTracker.correct,
+total: progressTracker.total,
+answered: Array.from(progressTracker.answered)
+},
+stepTracker: stepTracker,
+stepsCompleted: stepsCompleted,
+state: state
+};
+sessionStorage.setItem('section8Progress_v4', JSON.stringify(data));
 }
-
 const steps = [
-  { id: 1, icon: '🎯', title: 'Стартове завдання', tasks: 1 },
-  { id: 2, icon: '📖', title: 'Поняття і мета', tasks: 3 },
-  { id: 3, icon: '🔍', title: 'Принцип 1: Оцінка місця', tasks: 4 },
-  { id: 4, icon: '👁️', title: 'Принцип 2: Огляд постраждалого', tasks: 4 },
-  { id: 5, icon: '📞', title: 'Принцип 3: Виклик служб', tasks: 3 },
-  { id: 6, icon: '🩺', title: 'Принцип 4: Надання допомоги', tasks: 3 },
-  { id: 7, icon: '📚', title: 'Курси та ресурси', tasks: 0 },
-  { id: 8, icon: '🏆', title: 'Самооцінювання', tasks: 0 }
+{ id: 1, icon: '🎯', title: 'Стартове завдання', tasks: 1 },
+{ id: 2, icon: '📖', title: 'Поняття і мета', tasks: 2 },
+{ id: 3, icon: '🔍', title: 'Принцип 1: Оцінка місця', tasks: 4 },
+{ id: 4, icon: '👁️', title: 'Принцип 2: Огляд постраждалого', tasks: 4 },
+{ id: 5, icon: '📞', title: 'Принцип 3: Виклик служб', tasks: 3 },
+{ id: 6, icon: '🩺', title: 'Принцип 4: Надання допомоги', tasks: 3 },
+{ id: 7, icon: '📚', title: 'Курси та ресурси', tasks: 0 },
+{ id: 8, icon: '🏆', title: 'Самооцінювання', tasks: 0 }
 ];
-
 function renderStepNavigation() {
-  const nav = document.getElementById('stepNavigation');
-  if (!nav) return;
-  nav.innerHTML = '';
-  steps.forEach((step, index) => {
-    const item = document.createElement('div');
-    item.className = 'step-nav-item';
-    const tasksDone = step.tasks > 0 ? stepTracker['step' + step.id].completed : 0;
-    const isCompleted = step.tasks > 0 && stepsCompleted[step.id];
-    if (step.tasks === 0 && step.id === 7) {
-      if (stepsCompleted[6]) item.classList.add('completed');
-      else if (state.currentStep === 7) item.classList.add('active');
-    } else if (isCompleted) item.classList.add('completed');
-    else if (index === state.currentStep - 1) item.classList.add('active');
-    const statusText = step.tasks > 0 ? `${tasksDone}/${step.tasks} завдань` : (step.id === 7 ? 'Тільки теорія' : 'Фінал');
-    item.innerHTML = `
-      <div class="step-nav-number">${isCompleted ? '' : (index + 1)}</div>
-      <div class="step-nav-content">
-        <div class="step-nav-title">${step.icon} ${step.title}</div>
-        <div class="step-nav-status">${statusText}</div>
-      </div>
-    `;
-    item.onclick = () => goToStep(index + 1);
-    item.setAttribute('tabindex', '0');
-    item.setAttribute('role', 'button');
-    item.onkeydown = (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToStep(index + 1); }
-    };
-    nav.appendChild(item);
-  });
+const nav = document.getElementById('stepNavigation');
+if (!nav) return;
+nav.innerHTML = '';
+steps.forEach((step, index) => {
+const item = document.createElement('div');
+item.className = 'step-nav-item';
+const tasksDone = step.tasks > 0 ? stepTracker['step' + step.id].completed : 0;
+const isCompleted = step.tasks > 0 && stepsCompleted[step.id];
+if (step.tasks === 0 && step.id === 7) {
+if (stepsCompleted[6]) item.classList.add('completed');
+else if (state.currentStep === 7) item.classList.add('active');
+} else if (isCompleted) item.classList.add('completed');
+else if (index === state.currentStep - 1) item.classList.add('active');
+const statusText = step.tasks > 0 ? `${tasksDone}/${step.tasks} завдань` : (step.id === 7 ? 'Тільки теорія' : 'Фінал');
+item.innerHTML = `
+<div class="step-nav-number">${isCompleted ? '' : (index + 1)}</div>
+<div class="step-nav-content">
+<div class="step-nav-title">${step.icon} ${step.title}</div>
+<div class="step-nav-status">${statusText}</div>
+</div>
+`;
+item.onclick = () => goToStep(index + 1);
+item.setAttribute('tabindex', '0');
+item.setAttribute('role', 'button');
+item.onkeydown = (e) => {
+if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToStep(index + 1); }
+};
+nav.appendChild(item);
+});
 }
-
 function updateStep8Display() {
-  const totalTasks = 18;
-  let completedTasks = 0;
-  for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
-  const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
-  const accuracy = progressTracker.total > 0
-    ? Math.round((progressTracker.correct / progressTracker.total) * 100) : 0;
-  const completedSteps = Object.values(stepsCompleted).filter(v => v).length;
-  const elTasks = document.getElementById('statTasks');
-  const elCorrect = document.getElementById('statCorrect');
-  const elSteps = document.getElementById('statSteps');
-  const elAccuracy = document.getElementById('statAccuracy');
-  if (elTasks) elTasks.textContent = `${completedTasks}/${totalTasks}`;
-  if (elCorrect) elCorrect.textContent = progressTracker.correct;
-  if (elSteps) elSteps.textContent = `${completedSteps}/7`;
-  if (elAccuracy) elAccuracy.textContent = `${accuracy}%`;
-  const circle = document.getElementById('progressCircle');
-  const circlePercentage = document.getElementById('circlePercentage');
-  if (circle) circle.style.background = `conic-gradient(var(--success) ${percent}%, var(--bg) ${percent}%)`;
-  if (circlePercentage) circlePercentage.textContent = `${percent}%`;
-  let level = 'Початківець', emoji = '⭐☆☆☆☆';
-  if (percent >= 76) { level = 'Експерт першої допомоги'; emoji = '⭐⭐⭐⭐⭐'; }
-  else if (percent >= 51) { level = 'Дослідник'; emoji = '⭐⭐⭐☆☆'; }
-  else if (percent >= 26) { level = 'Учень'; emoji = '⭐⭐☆☆☆'; }
-  const elLevel = document.getElementById('finalLevelTitle');
-  const elEmoji = document.getElementById('finalLevelDesc');
-  if (elLevel) elLevel.textContent = level;
-  if (elEmoji) elEmoji.textContent = emoji;
-  const stepsSummary = document.getElementById('stepsSummary');
-  if (stepsSummary) {
-    stepsSummary.innerHTML = '';
-    const stepsInfo = [
-      { icon: '🎯', title: 'Стартове завдання', tasks: 1 },
-      { icon: '📖', title: 'Поняття і мета', tasks: 3 },
-      { icon: '🔍', title: 'Принцип 1: Оцінка місця', tasks: 4 },
-      { icon: '👁️', title: 'Принцип 2: Огляд', tasks: 4 },
-      { icon: '📞', title: 'Принцип 3: Виклик служб', tasks: 3 },
-      { icon: '🩺', title: 'Принцип 4: Надання допомоги', tasks: 3 },
-      { icon: '📚', title: 'Курси та ресурси', tasks: 0 }
-    ];
-    stepsInfo.forEach((step, index) => {
-      const tasksDone = step.tasks > 0 ? stepTracker['step' + (index + 1)].completed : 0;
-      const isCompleted = step.tasks > 0 ? stepsCompleted[index + 1] : (index === 6 && stepsCompleted[6]);
-      const stepCard = document.createElement('div');
-      stepCard.className = 'step-card';
-      stepCard.innerHTML = `
-        <div class="step-card-icon">${step.icon}</div>
-        <div class="step-card-info">
-          <div class="step-card-title">${step.title}</div>
-          <div class="step-card-status ${isCompleted ? 'completed' : ''}">
-            ${step.tasks > 0 ? `${tasksDone}/${step.tasks} завдань виконано` : (index === 6 ? 'Теорія пройдена' : 'Фінал')} ${isCompleted ? '✅' : ''}
-          </div>
-        </div>
-      `;
-      stepsSummary.appendChild(stepCard);
-    });
-  }
-  state.selfRatings.forEach((rating, idx) => { if (rating > 0) rate(idx + 1, rating); });
+const totalTasks = 17;
+let completedTasks = 0;
+for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
+const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
+const accuracy = progressTracker.total > 0
+? Math.round((progressTracker.correct / progressTracker.total) * 100) : 0;
+const completedSteps = Object.values(stepsCompleted).filter(v => v).length;
+const elTasks = document.getElementById('statTasks');
+const elCorrect = document.getElementById('statCorrect');
+const elSteps = document.getElementById('statSteps');
+const elAccuracy = document.getElementById('statAccuracy');
+if (elTasks) elTasks.textContent = `${completedTasks}/${totalTasks}`;
+if (elCorrect) elCorrect.textContent = progressTracker.correct;
+if (elSteps) elSteps.textContent = `${completedSteps}/7`;
+if (elAccuracy) elAccuracy.textContent = `${accuracy}%`;
+const circle = document.getElementById('progressCircle');
+const circlePercentage = document.getElementById('circlePercentage');
+if (circle) circle.style.background = `conic-gradient(var(--success) ${percent}%, var(--bg) ${percent}%)`;
+if (circlePercentage) circlePercentage.textContent = `${percent}%`;
+let level = 'Початківець', emoji = '⭐☆☆☆☆';
+if (percent >= 76) { level = 'Експерт першої допомоги'; emoji = '⭐⭐⭐⭐⭐'; }
+else if (percent >= 51) { level = 'Дослідник'; emoji = '⭐⭐⭐☆☆'; }
+else if (percent >= 26) { level = 'Учень'; emoji = '⭐⭐☆☆☆'; }
+const elLevel = document.getElementById('finalLevelTitle');
+const elEmoji = document.getElementById('finalLevelDesc');
+if (elLevel) elLevel.textContent = level;
+if (elEmoji) elEmoji.textContent = emoji;
+const stepsSummary = document.getElementById('stepsSummary');
+if (stepsSummary) {
+stepsSummary.innerHTML = '';
+const stepsInfo = [
+{ icon: '🎯', title: 'Стартове завдання', tasks: 1 },
+{ icon: '📖', title: 'Поняття і мета', tasks: 2 },
+{ icon: '🔍', title: 'Принцип 1: Оцінка місця', tasks: 4 },
+{ icon: '👁️', title: 'Принцип 2: Огляд', tasks: 4 },
+{ icon: '📞', title: 'Принцип 3: Виклик служб', tasks: 3 },
+{ icon: '🩺', title: 'Принцип 4: Надання допомоги', tasks: 3 },
+{ icon: '📚', title: 'Курси та ресурси', tasks: 0 }
+];
+stepsInfo.forEach((step, index) => {
+const tasksDone = step.tasks > 0 ? stepTracker['step' + (index + 1)].completed : 0;
+const isCompleted = step.tasks > 0 ? stepsCompleted[index + 1] : (index === 6 && stepsCompleted[6]);
+const stepCard = document.createElement('div');
+stepCard.className = 'step-card';
+stepCard.innerHTML = `
+<div class="step-card-icon">${step.icon}</div>
+<div class="step-card-info">
+<div class="step-card-title">${step.title}</div>
+<div class="step-card-status ${isCompleted ? 'completed' : ''}">
+${step.tasks > 0 ? `${tasksDone}/${step.tasks} завдань виконано` : (index === 6 ? 'Теорія пройдена' : 'Фінал')} ${isCompleted ? '✅' : ''}
+</div>
+</div>
+`;
+stepsSummary.appendChild(stepCard);
+});
 }
-
+state.selfRatings.forEach((rating, idx) => { if (rating > 0) rate(idx + 1, rating); });
+}
 function hideAllPages() {
-  ['mainPage', 'step1Page', 'step2Page', 'step3Page', 'step4Page', 'step5Page', 'step6Page', 'step7Page', 'step8Page'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.add('hidden');
-  });
+['mainPage', 'step1Page', 'step2Page', 'step3Page', 'step4Page', 'step5Page', 'step6Page', 'step7Page', 'step8Page'].forEach(id => {
+const el = document.getElementById(id);
+if (el) el.classList.add('hidden');
+});
 }
-
 function goToMainPage() {
-  hideAllPages();
-  document.getElementById('mainPage').classList.remove('hidden');
-  document.getElementById('headerTitle').textContent = '🩹 Тренажер «Навігатор ризиків»';
-  state.currentStep = 0;
-  saveProgress();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+hideAllPages();
+document.getElementById('mainPage').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '🩹 Тренажер «Навігатор ризиків»';
+state.currentStep = 0;
+saveProgress();
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function goToStep(stepNumber) {
-  hideAllPages();
-  if (stepNumber === 1) {
-    document.getElementById('step1Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '🎯 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 1;
-  } else if (stepNumber === 2) {
-    document.getElementById('step2Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '📖 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 2;
-    showS2('s2Theory');
-  } else if (stepNumber === 3) {
-    document.getElementById('step3Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '🔍 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 3;
-    showS3('s3Theory');
-    initS3DragAndDrop1();
-  } else if (stepNumber === 4) {
-    document.getElementById('step4Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '👁️ § 8. Поняття і мета першої допомоги';
-    state.currentStep = 4;
-    showS4('s4Theory');
-    initS4DragAndDrop1();
-  } else if (stepNumber === 5) {
-    document.getElementById('step5Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '📞 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 5;
-    showS5('s5Theory');
-  } else if (stepNumber === 6) {
-    document.getElementById('step6Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '🩺 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 6;
-    showS6('s6Theory');
-  } else if (stepNumber === 7) {
-    document.getElementById('step7Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '📚 § 8. Поняття і мета першої допомоги';
-    state.currentStep = 7;
-    if (!stepsCompleted[7]) {
-      stepsCompleted[7] = true;
-      showToast('📚 Теоретичний блок пройдено!', '📚');
-      updateLiveProgress();
-    }
-  } else if (stepNumber === 8) {
-    document.getElementById('step8Page').classList.remove('hidden');
-    document.getElementById('headerTitle').textContent = '🏆 Самооцінювання';
-    state.currentStep = 8;
-    updateStep8Display();
-  } else {
-    document.getElementById('mainPage').classList.remove('hidden');
-    return;
-  }
-  saveProgress();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+hideAllPages();
+if (stepNumber === 1) {
+document.getElementById('step1Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '🎯 § 8. Поняття і мета першої допомоги';
+state.currentStep = 1;
+} else if (stepNumber === 2) {
+document.getElementById('step2Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '📖 § 8. Поняття і мета першої допомоги';
+state.currentStep = 2;
+showS2('s2Theory');
+} else if (stepNumber === 3) {
+document.getElementById('step3Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '🔍 § 8. Поняття і мета першої допомоги';
+state.currentStep = 3;
+showS3('s3Theory');
+initS3DragAndDrop1();
+} else if (stepNumber === 4) {
+document.getElementById('step4Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '👁️ § 8. Поняття і мета першої допомоги';
+state.currentStep = 4;
+showS4('s4Theory');
+initS4DragAndDrop1();
+} else if (stepNumber === 5) {
+document.getElementById('step5Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '📞 § 8. Поняття і мета першої допомоги';
+state.currentStep = 5;
+showS5('s5Theory');
+} else if (stepNumber === 6) {
+document.getElementById('step6Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '🩺 § 8. Поняття і мета першої допомоги';
+state.currentStep = 6;
+showS6('s6Theory');
+} else if (stepNumber === 7) {
+document.getElementById('step7Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '📚 § 8. Поняття і мета першої допомоги';
+state.currentStep = 7;
+if (!stepsCompleted[7]) {
+stepsCompleted[7] = true;
+showToast('📚 Теоретичний блок пройдено!', '📚');
+updateLiveProgress();
 }
-
+} else if (stepNumber === 8) {
+document.getElementById('step8Page').classList.remove('hidden');
+document.getElementById('headerTitle').textContent = '🏆 Самооцінювання';
+state.currentStep = 8;
+updateStep8Display();
+} else {
+document.getElementById('mainPage').classList.remove('hidden');
+return;
+}
+saveProgress();
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 function showS2(id) {
-  ['s2Theory', 's2Task1', 's2Task2', 's2Task3'].forEach(s => {
-    const el = document.getElementById(s);
-    if (el) el.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) target.classList.remove('hidden');
-  if (id === 's2Task2') initS2DragAndDrop2();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+['s2Theory', 's2Task1', 's2Task3'].forEach(s => {
+const el = document.getElementById(s);
+if (el) el.classList.add('hidden');
+});
+const target = document.getElementById(id);
+if (target) target.classList.remove('hidden');
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showS3(id) {
-  ['s3Theory', 's3Task1', 's3Task2', 's3Task3', 's3Task4'].forEach(s => {
-    const el = document.getElementById(s);
-    if (el) el.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) target.classList.remove('hidden');
-  if (id === 's3Task1') initS3DragAndDrop1();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+['s3Theory', 's3Task1', 's3Task2', 's3Task3', 's3Task4'].forEach(s => {
+const el = document.getElementById(s);
+if (el) el.classList.add('hidden');
+});
+const target = document.getElementById(id);
+if (target) target.classList.remove('hidden');
+if (id === 's3Task1') initS3DragAndDrop1();
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showS4(id) {
-  ['s4Theory', 's4Task1', 's4Task2', 's4Task3', 's4Task4'].forEach(s => {
-    const el = document.getElementById(s);
-    if (el) el.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) target.classList.remove('hidden');
-  if (id === 's4Task1') initS4DragAndDrop1();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+['s4Theory', 's4Task1', 's4Task2', 's4Task3', 's4Task4'].forEach(s => {
+const el = document.getElementById(s);
+if (el) el.classList.add('hidden');
+});
+const target = document.getElementById(id);
+if (target) target.classList.remove('hidden');
+if (id === 's4Task1') initS4DragAndDrop1();
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showS5(id) {
-  ['s5Theory', 's5Task1', 's5Task2', 's5Task3'].forEach(s => {
-    const el = document.getElementById(s);
-    if (el) el.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) target.classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+['s5Theory', 's5Task1', 's5Task2', 's5Task3'].forEach(s => {
+const el = document.getElementById(s);
+if (el) el.classList.add('hidden');
+});
+const target = document.getElementById(id);
+if (target) target.classList.remove('hidden');
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showS6(id) {
-  ['s6Theory', 's6Task1', 's6Task2', 's6Task3'].forEach(s => {
-    const el = document.getElementById(s);
-    if (el) el.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) target.classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+['s6Theory', 's6Task1', 's6Task2', 's6Task3'].forEach(s => {
+const el = document.getElementById(s);
+if (el) el.classList.add('hidden');
+});
+const target = document.getElementById(id);
+if (target) target.classList.remove('hidden');
+window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function toggleOption(element) {
-  if (element.classList.contains('disabled')) return;
-  element.classList.toggle('selected');
+if (element.classList.contains('disabled')) return;
+element.classList.toggle('selected');
 }
-
 function selectOption(element, groupId) {
-  if (element.classList.contains('disabled')) return;
-  document.querySelectorAll(`#${groupId} .option`).forEach(opt => {
-    opt.classList.remove('selected');
-    opt.setAttribute('aria-checked', 'false');
-  });
-  element.classList.add('selected');
-  element.setAttribute('aria-checked', 'true');
+if (element.classList.contains('disabled')) return;
+document.querySelectorAll(`#${groupId} .option`).forEach(opt => {
+opt.classList.remove('selected');
+opt.setAttribute('aria-checked', 'false');
+});
+element.classList.add('selected');
+element.setAttribute('aria-checked', 'true');
 }
-
 function selectTF(element, groupId) {
-  if (element.classList.contains('correct') || element.classList.contains('incorrect')) return;
-  const container = element.closest('.tf-item');
-  container.querySelectorAll('.tf-option').forEach(opt => opt.classList.remove('selected'));
-  element.classList.add('selected');
-  tfSelections[groupId] = element;
+if (element.classList.contains('correct') || element.classList.contains('incorrect')) return;
+const container = element.closest('.tf-item');
+container.querySelectorAll('.tf-option').forEach(opt => opt.classList.remove('selected'));
+element.classList.add('selected');
+tfSelections[groupId] = element;
 }
-
 // STEP 1
 function checkS1Task1() {
-  const selected = document.querySelector('#s1Task1Options .option.selected');
-  const feedback = document.getElementById('s1Task1Feedback');
-  feedback.style.display = 'block';
-  if (!selected) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери один варіант відповіді';
-    return;
-  }
-  const isCorrect = selected.dataset.correct === 'true';
-  if (isCorrect) {
-    selected.classList.add('correct');
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Спочатку оцінка безпеки місця події.';
-    document.querySelectorAll('#s1Task1Options .option').forEach(opt => {
-      opt.classList.add('disabled');
-      if (opt.dataset.correct === 'true') opt.classList.add('correct');
-    });
-    addCorrect('step1_task1');
-    showToast('🎉 Перше завдання виконано!');
-  } else {
-    selected.classList.add('incorrect');
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз. Що безпечніше?';
-  }
+const selected = document.querySelector('#s1Task1Options .option.selected');
+const feedback = document.getElementById('s1Task1Feedback');
+feedback.style.display = 'block';
+if (!selected) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери один варіант відповіді';
+return;
 }
-
+const isCorrect = selected.dataset.correct === 'true';
+if (isCorrect) {
+selected.classList.add('correct');
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Спочатку оцінка безпеки місця події.';
+document.querySelectorAll('#s1Task1Options .option').forEach(opt => {
+opt.classList.add('disabled');
+if (opt.dataset.correct === 'true') opt.classList.add('correct');
+});
+addCorrect('step1_task1');
+showToast('🎉 Перше завдання виконано!');
+} else {
+selected.classList.add('incorrect');
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз. Що безпечніше?';
+}
+}
 // STEP 2
 function checkS2Task1() {
-  const options = document.querySelectorAll('#s2Task1Options .option');
-  const feedback = document.getElementById('s2Task1Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти визначив(ла) всі цілі першої допомоги.';
-    addCorrect('step2_task1');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Правильні варіанти виділено зеленим.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s2Task1Options .option');
+const feedback = document.getElementById('s2Task1Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти визначив(ла) всі цілі першої допомоги.';
+addCorrect('step2_task1');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Правильні варіанти виділено зеленим.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS2Task1() {
-  if (progressTracker.answered.has('step2_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s2Task1Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s2Task1Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step2_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s2Task1Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s2Task1Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
-function initS2DragAndDrop2() {
-  initUniversalDragDrop('s2DragItems2', '#s2DropZones2 .drop-zone', dropS2Order);
-}
-
-function dropS2Order(e) {
-  e.preventDefault();
-  this.classList.remove('drag-over');
-  if (draggedItem) {
-    if (this.classList.contains('filled')) {
-      const existingText = this.querySelector('.drop-zone-text').textContent;
-      const existingStep = this.dataset.step;
-      const newItem = document.createElement('div');
-      newItem.className = 'drag-item';
-      newItem.draggable = true;
-      newItem.dataset.order = existingStep;
-      newItem.innerHTML = `<div class="drag-item-step">?</div><div>${existingText}</div>`;
-      newItem.addEventListener('dragstart', dragStart);
-      newItem.addEventListener('dragend', dragEnd);
-      newItem.addEventListener('touchstart', touchStart, { passive: false });
-      newItem.addEventListener('touchmove', touchMove, { passive: false });
-      newItem.addEventListener('touchend', touchEnd, { passive: false });
-      document.getElementById('s2DragItems2').appendChild(newItem);
-    }
-    const itemText = draggedItem.querySelector('div:last-child').textContent;
-    this.innerHTML = `<div class="drop-zone-number">${this.dataset.position}</div><div class="drop-zone-text">${itemText}</div>`;
-    this.classList.add('filled');
-    this.dataset.step = draggedItem.dataset.order;
-    draggedItem.remove();
-    draggedItem = null;
-  }
-}
-
-function checkS2Task2() {
-  const dropZones = document.querySelectorAll('#s2DropZones2 .drop-zone');
-  const feedback = document.getElementById('s2Task2Feedback');
-  feedback.style.display = 'block';
-  let allFilled = true;
-  let dragCorrect = true;
-  dropZones.forEach(zone => {
-    if (!zone.classList.contains('filled')) { allFilled = false; return; }
-    const position = parseInt(zone.dataset.position);
-    const step = parseInt(zone.dataset.step);
-    if (position === step) { zone.classList.add('correct'); zone.classList.remove('incorrect'); }
-    else { zone.classList.add('incorrect'); zone.classList.remove('correct'); dragCorrect = false; }
-  });
-  if (!allFilled) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Заповни всі позиції (1-2-3-4)!';
-    return;
-  }
-  if (dragCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Пріоритети: 1.Зберегти життя, 2.Запобігти погіршенню, 3.Зменшити біль, 4.Підготувати до передачі.';
-    addCorrect('step2_task2');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Правильний порядок: 1.Зберегти життя, 2.Запобігти погіршенню, 3.Зменшити біль, 4.Підготувати до передачі.';
-  }
-}
-
-function retryS2Task2() {
-  if (progressTracker.answered.has('step2_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s2DropZones2 .drop-zone').forEach(zone => {
-    zone.classList.remove('filled', 'correct', 'incorrect');
-    zone.innerHTML = `<div class="drop-zone-number">${zone.dataset.position}</div><div class="drop-zone-text">Перетягни сюди</div>`;
-    delete zone.dataset.step;
-  });
-  const dragItemsContainer = document.getElementById('s2DragItems2');
-  dragItemsContainer.innerHTML = `
-    <div class="drag-item" draggable="true" data-order="1"><div class="drag-item-step">?</div><div>Підготувати до передачі медикам</div></div>
-    <div class="drag-item" draggable="true" data-order="2"><div class="drag-item-step">?</div><div>Зменшити біль та страждання</div></div>
-    <div class="drag-item" draggable="true" data-order="3"><div class="drag-item-step">?</div><div>Запобігти погіршенню стану</div></div>
-    <div class="drag-item" draggable="true" data-order="4"><div class="drag-item-step">?</div><div>Зберегти життя</div></div>
-  `;
-  initS2DragAndDrop2();
-  document.getElementById('s2Task2Feedback').style.display = 'none';
-  showToast('🔄 Спробуй впорядкувати ще раз');
-}
-
 function checkS2Task3() {
-  const options = document.querySelectorAll('#s2Task3Options .option');
-  const feedback = document.getElementById('s2Task3Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти проаналізував(ла) критичну важливість часу та масового навчання.';
-    addCorrect('step2_task3');
-    showToast('🎉 Крок 2 завершено!');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s2Task3Options .option');
+const feedback = document.getElementById('s2Task3Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти проаналізував(ла) критичну важливість часу та масового навчання.';
+addCorrect('step2_task3');
+showToast('🎉 Крок 2 завершено!');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS2Task3() {
-  if (progressTracker.answered.has('step2_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s2Task3Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s2Task3Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step2_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s2Task3Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s2Task3Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 // STEP 3
 function initS3DragAndDrop1() {
-  initUniversalDragDrop('s3DragItems1', '#s3DropZones1 .drop-zone', dropS3Order1);
+initUniversalDragDrop('s3DragItems1', '#s3DropZones1 .drop-zone', dropS3Order1);
 }
-
 function dropS3Order1(e) {
-  e.preventDefault();
-  this.classList.remove('drag-over');
-  if (draggedItem) {
-    if (this.classList.contains('filled')) {
-      const existingText = this.querySelector('.drop-zone-text').textContent;
-      const existingStep = this.dataset.step;
-      const newItem = document.createElement('div');
-      newItem.className = 'drag-item';
-      newItem.draggable = true;
-      newItem.dataset.step = existingStep;
-      newItem.innerHTML = `<div class="drag-item-step">?</div><div>${existingText}</div>`;
-      newItem.addEventListener('dragstart', dragStart);
-      newItem.addEventListener('dragend', dragEnd);
-      newItem.addEventListener('touchstart', touchStart, { passive: false });
-      newItem.addEventListener('touchmove', touchMove, { passive: false });
-      newItem.addEventListener('touchend', touchEnd, { passive: false });
-      document.getElementById('s3DragItems1').appendChild(newItem);
-    }
-    const itemText = draggedItem.querySelector('div:last-child').textContent;
-    this.innerHTML = `<div class="drop-zone-number">${this.dataset.position}</div><div class="drop-zone-text">${itemText}</div>`;
-    this.classList.add('filled');
-    this.dataset.step = draggedItem.dataset.step;
-    draggedItem.remove();
-    draggedItem = null;
-  }
+e.preventDefault();
+this.classList.remove('drag-over');
+if (draggedItem) {
+if (this.classList.contains('filled')) {
+const existingText = this.querySelector('.drop-zone-text').textContent;
+const existingStep = this.dataset.step;
+const newItem = document.createElement('div');
+newItem.className = 'drag-item';
+newItem.draggable = true;
+newItem.dataset.step = existingStep;
+newItem.innerHTML = `<div class="drag-item-step">?</div><div>${existingText}</div>`;
+newItem.addEventListener('dragstart', dragStart);
+newItem.addEventListener('dragend', dragEnd);
+newItem.addEventListener('touchstart', touchStart, { passive: false });
+newItem.addEventListener('touchmove', touchMove, { passive: false });
+newItem.addEventListener('touchend', touchEnd, { passive: false });
+document.getElementById('s3DragItems1').appendChild(newItem);
 }
-
+const itemText = draggedItem.querySelector('div:last-child').textContent;
+this.innerHTML = `<div class="drop-zone-number">${this.dataset.position}</div><div class="drop-zone-text">${itemText}</div>`;
+this.classList.add('filled');
+this.dataset.step = draggedItem.dataset.step;
+draggedItem.remove();
+draggedItem = null;
+}
+}
 function checkS3Task1() {
-  const dropZones = document.querySelectorAll('#s3DropZones1 .drop-zone');
-  const feedback = document.getElementById('s3Task1Feedback');
-  feedback.style.display = 'block';
-  let allFilled = true;
-  let dragCorrect = true;
-  dropZones.forEach(zone => {
-    if (!zone.classList.contains('filled')) { allFilled = false; return; }
-    const position = parseInt(zone.dataset.position);
-    const step = parseInt(zone.dataset.step);
-    if (position === step) { zone.classList.add('correct'); zone.classList.remove('incorrect'); }
-    else { zone.classList.add('incorrect'); zone.classList.remove('correct'); dragCorrect = false; }
-  });
-  if (!allFilled) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Заповни всі позиції (1-2-3-4-5)!';
-    return;
-  }
-  if (dragCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Алгоритм: 1.Зупинитись, 2.Оглянути місце, 3.Оцінити загрози, 4.Діяти/викликати, 5.Підійти.';
-    addCorrect('step3_task1');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Правильний порядок: 1.Зупинитись, 2.Оглянути місце, 3.Оцінити загрози, 4.Діяти/викликати, 5.Підійти.';
-  }
+const dropZones = document.querySelectorAll('#s3DropZones1 .drop-zone');
+const feedback = document.getElementById('s3Task1Feedback');
+feedback.style.display = 'block';
+let allFilled = true;
+let dragCorrect = true;
+dropZones.forEach(zone => {
+if (!zone.classList.contains('filled')) { allFilled = false; return; }
+const position = parseInt(zone.dataset.position);
+const step = parseInt(zone.dataset.step);
+if (position === step) { zone.classList.add('correct'); zone.classList.remove('incorrect'); }
+else { zone.classList.add('incorrect'); zone.classList.remove('correct'); dragCorrect = false; }
+});
+if (!allFilled) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Заповни всі позиції (1-2-3-4-5)!';
+return;
 }
-
+if (dragCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Алгоритм: 1.Зупинитись, 2.Оглянути місце, 3.Оцінити загрози, 4.Діяти/викликати, 5.Підійти.';
+addCorrect('step3_task1');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Правильний порядок: 1.Зупинитись, 2.Оглянути місце, 3.Оцінити загрози, 4.Діяти/викликати, 5.Підійти.';
+}
+}
 function retryS3Task1() {
-  if (progressTracker.answered.has('step3_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s3DropZones1 .drop-zone').forEach(zone => {
-    zone.classList.remove('filled', 'correct', 'incorrect');
-    zone.innerHTML = `<div class="drop-zone-number">${zone.dataset.position}</div><div class="drop-zone-text">Перетягни сюди</div>`;
-    delete zone.dataset.step;
-  });
-  const dragItemsContainer = document.getElementById('s3DragItems1');
-  dragItemsContainer.innerHTML = `
-    <div class="drag-item" draggable="true" data-step="3"><div class="drag-item-step">?</div><div>Оцінити, чи є загрози для себе</div></div>
-    <div class="drag-item" draggable="true" data-step="5"><div class="drag-item-step">?</div><div>Підійти до постраждалого та надати допомогу</div></div>
-    <div class="drag-item" draggable="true" data-step="1"><div class="drag-item-step">?</div><div>Зупинитися на безпечній відстані</div></div>
-    <div class="drag-item" draggable="true" data-step="4"><div class="drag-item-step">?</div><div>Якщо безпечно — діяти; якщо ні — викликати служби</div></div>
-    <div class="drag-item" draggable="true" data-step="2"><div class="drag-item-step">?</div><div>Оглянути місце події навколо</div></div>
-  `;
-  initS3DragAndDrop1();
-  document.getElementById('s3Task1Feedback').style.display = 'none';
-  showToast('🔄 Спробуй впорядкувати ще раз');
+if (progressTracker.answered.has('step3_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s3DropZones1 .drop-zone').forEach(zone => {
+zone.classList.remove('filled', 'correct', 'incorrect');
+zone.innerHTML = `<div class="drop-zone-number">${zone.dataset.position}</div><div class="drop-zone-text">Перетягни сюди</div>`;
+delete zone.dataset.step;
+});
+const dragItemsContainer = document.getElementById('s3DragItems1');
+dragItemsContainer.innerHTML = `
+<div class="drag-item" draggable="true" data-step="3"><div class="drag-item-step">?</div><div>Оцінити, чи є загрози для себе</div></div>
+<div class="drag-item" draggable="true" data-step="5"><div class="drag-item-step">?</div><div>Підійти до постраждалого та надати допомогу</div></div>
+<div class="drag-item" draggable="true" data-step="1"><div class="drag-item-step">?</div><div>Зупинитися на безпечній відстані</div></div>
+<div class="drag-item" draggable="true" data-step="4"><div class="drag-item-step">?</div><div>Якщо безпечно — діяти; якщо ні — викликати служби</div></div>
+<div class="drag-item" draggable="true" data-step="2"><div class="drag-item-step">?</div><div>Оглянути місце події навколо</div></div>
+`;
+initS3DragAndDrop1();
+document.getElementById('s3Task1Feedback').style.display = 'none';
+showToast('🔄 Спробуй впорядкувати ще раз');
 }
-
 function checkS3Task2() {
-  const options = document.querySelectorAll('#s3Task2Options .option');
-  const feedback = document.getElementById('s3Task2Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти проаналізував(ла) помилку Дмитра та визначив(ла) правильну послідовність.';
-    addCorrect('step3_task2');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s3Task2Options .option');
+const feedback = document.getElementById('s3Task2Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти проаналізував(ла) помилку Дмитра та визначив(ла) правильну послідовність.';
+addCorrect('step3_task2');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS3Task2() {
-  if (progressTracker.answered.has('step3_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s3Task2Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s3Task2Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step3_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s3Task2Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s3Task2Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS3Task3() {
-  const options = document.querySelectorAll('#s3Task3Options .option');
-  const feedback = document.getElementById('s3Task3Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти визначив(ла) всі загрози.';
-    addCorrect('step3_task3');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s3Task3Options .option');
+const feedback = document.getElementById('s3Task3Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти визначив(ла) всі загрози.';
+addCorrect('step3_task3');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS3Task3() {
-  if (progressTracker.answered.has('step3_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s3Task3Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s3Task3Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step3_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s3Task3Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s3Task3Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS3Task4() {
-  const options = document.querySelectorAll('#s3Task4Options .option');
-  const feedback = document.getElementById('s3Task4Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Марина правильно розставила пріоритети.';
-    addCorrect('step3_task4');
-    showToast('🎉 Крок 3 завершено!');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s3Task4Options .option');
+const feedback = document.getElementById('s3Task4Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Марина правильно розставила пріоритети.';
+addCorrect('step3_task4');
+showToast('🎉 Крок 3 завершено!');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS3Task4() {
-  if (progressTracker.answered.has('step3_task4')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s3Task4Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s3Task4Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step3_task4')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s3Task4Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s3Task4Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 // STEP 4
 function initS4DragAndDrop1() {
-  initUniversalDragDrop('s4DragItems1', '#s4DropZones1 .drop-zone', dropS4Order1);
+initUniversalDragDrop('s4DragItems1', '#s4DropZones1 .drop-zone', dropS4Order1);
 }
-
 function dropS4Order1(e) {
-  e.preventDefault();
-  this.classList.remove('drag-over');
-  if (draggedItem) {
-    if (this.classList.contains('filled')) {
-      const existingText = this.querySelector('.drop-zone-text').textContent;
-      const existingStep = this.dataset.step;
-      const newItem = document.createElement('div');
-      newItem.className = 'drag-item';
-      newItem.draggable = true;
-      newItem.dataset.step = existingStep;
-      newItem.innerHTML = `<div class="drag-item-step">?</div><div>${existingText}</div>`;
-      newItem.addEventListener('dragstart', dragStart);
-      newItem.addEventListener('dragend', dragEnd);
-      newItem.addEventListener('touchstart', touchStart, { passive: false });
-      newItem.addEventListener('touchmove', touchMove, { passive: false });
-      newItem.addEventListener('touchend', touchEnd, { passive: false });
-      document.getElementById('s4DragItems1').appendChild(newItem);
-    }
-    const itemText = draggedItem.querySelector('div:last-child').textContent;
-    this.innerHTML = `<div class="drop-zone-number">${this.dataset.position}</div><div class="drop-zone-text">${itemText}</div>`;
-    this.classList.add('filled');
-    this.dataset.step = draggedItem.dataset.step;
-    draggedItem.remove();
-    draggedItem = null;
-  }
+e.preventDefault();
+this.classList.remove('drag-over');
+if (draggedItem) {
+if (this.classList.contains('filled')) {
+const existingText = this.querySelector('.drop-zone-text').textContent;
+const existingStep = this.dataset.step;
+const newItem = document.createElement('div');
+newItem.className = 'drag-item';
+newItem.draggable = true;
+newItem.dataset.step = existingStep;
+newItem.innerHTML = `<div class="drag-item-step">?</div><div>${existingText}</div>`;
+newItem.addEventListener('dragstart', dragStart);
+newItem.addEventListener('dragend', dragEnd);
+newItem.addEventListener('touchstart', touchStart, { passive: false });
+newItem.addEventListener('touchmove', touchMove, { passive: false });
+newItem.addEventListener('touchend', touchEnd, { passive: false });
+document.getElementById('s4DragItems1').appendChild(newItem);
 }
-
+const itemText = draggedItem.querySelector('div:last-child').textContent;
+this.innerHTML = `<div class="drop-zone-number">${this.dataset.position}</div><div class="drop-zone-text">${itemText}</div>`;
+this.classList.add('filled');
+this.dataset.step = draggedItem.dataset.step;
+draggedItem.remove();
+draggedItem = null;
+}
+}
 function checkS4Task1() {
-  const dropZones = document.querySelectorAll('#s4DropZones1 .drop-zone');
-  const feedback = document.getElementById('s4Task1Feedback');
-  feedback.style.display = 'block';
-  let allFilled = true;
-  let dragCorrect = true;
-  dropZones.forEach(zone => {
-    if (!zone.classList.contains('filled')) { allFilled = false; return; }
-    const position = parseInt(zone.dataset.position);
-    const step = parseInt(zone.dataset.step);
-    if (position === step) { zone.classList.add('correct'); zone.classList.remove('incorrect'); }
-    else { zone.classList.add('incorrect'); zone.classList.remove('correct'); dragCorrect = false; }
-  });
-  if (!allFilled) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Заповни всі позиції (1-2-3-4)!';
-    return;
-  }
-  if (dragCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Послідовність: 1.Свідомість, 2.Дихальні шляхи, 3.Дихання, 4.Кровотечі.';
-    addCorrect('step4_task1');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Правильний порядок: 1.Свідомість, 2.Дихальні шляхи, 3.Дихання, 4.Кровотечі.';
-  }
+const dropZones = document.querySelectorAll('#s4DropZones1 .drop-zone');
+const feedback = document.getElementById('s4Task1Feedback');
+feedback.style.display = 'block';
+let allFilled = true;
+let dragCorrect = true;
+dropZones.forEach(zone => {
+if (!zone.classList.contains('filled')) { allFilled = false; return; }
+const position = parseInt(zone.dataset.position);
+const step = parseInt(zone.dataset.step);
+if (position === step) { zone.classList.add('correct'); zone.classList.remove('incorrect'); }
+else { zone.classList.add('incorrect'); zone.classList.remove('correct'); dragCorrect = false; }
+});
+if (!allFilled) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Заповни всі позиції (1-2-3-4)!';
+return;
 }
-
+if (dragCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong>';
+addCorrect('step4_task1');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
+}
+}
 function retryS4Task1() {
-  if (progressTracker.answered.has('step4_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s4DropZones1 .drop-zone').forEach(zone => {
-    zone.classList.remove('filled', 'correct', 'incorrect');
-    zone.innerHTML = `<div class="drop-zone-number">${zone.dataset.position}</div><div class="drop-zone-text">Перетягни сюди</div>`;
-    delete zone.dataset.step;
-  });
-  const dragItemsContainer = document.getElementById('s4DragItems1');
-  dragItemsContainer.innerHTML = `
-    <div class="drag-item" draggable="true" data-step="3"><div class="drag-item-step">?</div><div>Перевірити дихання методом «Бачу — чую — відчуваю»</div></div>
-    <div class="drag-item" draggable="true" data-step="1"><div class="drag-item-step">?</div><div>Перевірити свідомість (запитати, потрусити за плечі)</div></div>
-    <div class="drag-item" draggable="true" data-step="4"><div class="drag-item-step">?</div><div>Оглянути на наявність кровотеч</div></div>
-    <div class="drag-item" draggable="true" data-step="2"><div class="drag-item-step">?</div><div>Забезпечити прохідність дихальних шляхів</div></div>
-  `;
-  initS4DragAndDrop1();
-  document.getElementById('s4Task1Feedback').style.display = 'none';
-  showToast('🔄 Спробуй впорядкувати ще раз');
+if (progressTracker.answered.has('step4_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s4DropZones1 .drop-zone').forEach(zone => {
+zone.classList.remove('filled', 'correct', 'incorrect');
+zone.innerHTML = `<div class="drop-zone-number">${zone.dataset.position}</div><div class="drop-zone-text">Перетягни сюди</div>`;
+delete zone.dataset.step;
+});
+const dragItemsContainer = document.getElementById('s4DragItems1');
+dragItemsContainer.innerHTML = `
+<div class="drag-item" draggable="true" data-step="4"><div class="drag-item-step">?</div><div>Перевірити дихання методом «Бачу — чую — відчуваю»</div></div>
+<div class="drag-item" draggable="true" data-step="2"><div class="drag-item-step">?</div><div>Перевірити свідомість (запитати, потрусити за плечі)</div></div>
+<div class="drag-item" draggable="true" data-step="1"><div class="drag-item-step">?</div><div>Оглянути на наявність кровотеч</div></div>
+<div class="drag-item" draggable="true" data-step="3"><div class="drag-item-step">?</div><div>Забезпечити прохідність дихальних шляхів</div></div>
+`;
+initS4DragAndDrop1();
+document.getElementById('s4Task1Feedback').style.display = 'none';
+showToast('🔄 Спробуй впорядкувати ще раз');
 }
-
 function checkS4Task2() {
-  const options = document.querySelectorAll('#s4Task2Options .option');
-  const feedback = document.getElementById('s4Task2Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Метод «Бачу — чую — відчуваю».';
-    addCorrect('step4_task2');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s4Task2Options .option');
+const feedback = document.getElementById('s4Task2Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Метод «Бачу — чую — відчуваю».';
+addCorrect('step4_task2');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS4Task2() {
-  if (progressTracker.answered.has('step4_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s4Task2Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s4Task2Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step4_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s4Task2Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s4Task2Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS4Task3() {
-  const selected = document.querySelector('#s4Task3Options .option.selected');
-  const feedback = document.getElementById('s4Task3Feedback');
-  feedback.style.display = 'block';
-  if (!selected) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери один варіант відповіді';
-    return;
-  }
-  const isCorrect = selected.dataset.correct === 'true';
-  if (isCorrect) {
-    selected.classList.add('correct');
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Зупинка рясної кровотечі — пріоритет.';
-    document.querySelectorAll('#s4Task3Options .option').forEach(opt => {
-      opt.classList.add('disabled');
-      if (opt.dataset.correct === 'true') opt.classList.add('correct');
-    });
-    addCorrect('step4_task3');
-  } else {
-    selected.classList.add('incorrect');
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
-  }
+const selected = document.querySelector('#s4Task3Options .option.selected');
+const feedback = document.getElementById('s4Task3Feedback');
+feedback.style.display = 'block';
+if (!selected) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери один варіант відповіді';
+return;
 }
-
+const isCorrect = selected.dataset.correct === 'true';
+if (isCorrect) {
+selected.classList.add('correct');
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Зупинка рясної кровотечі — пріоритет.';
+document.querySelectorAll('#s4Task3Options .option').forEach(opt => {
+opt.classList.add('disabled');
+if (opt.dataset.correct === 'true') opt.classList.add('correct');
+});
+addCorrect('step4_task3');
+} else {
+selected.classList.add('incorrect');
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
+}
+}
 function retryS4Task3() {
-  if (progressTracker.answered.has('step4_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s4Task3Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s4Task3Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step4_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s4Task3Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s4Task3Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS4Task4() {
-  const selected = document.querySelector('#s4Task4Options .option.selected');
-  const feedback = document.getElementById('s4Task4Feedback');
-  feedback.style.display = 'block';
-  if (!selected) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери один варіант відповіді';
-    return;
-  }
-  const isCorrect = selected.dataset.correct === 'true';
-  if (isCorrect) {
-    selected.classList.add('correct');
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Стабільне бокове положення — коли людина дихає.';
-    document.querySelectorAll('#s4Task4Options .option').forEach(opt => {
-      opt.classList.add('disabled');
-      if (opt.dataset.correct === 'true') opt.classList.add('correct');
-    });
-    addCorrect('step4_task4');
-    showToast('🎉 Крок 4 завершено!');
-  } else {
-    selected.classList.add('incorrect');
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
-  }
+const selected = document.querySelector('#s4Task4Options .option.selected');
+const feedback = document.getElementById('s4Task4Feedback');
+feedback.style.display = 'block';
+if (!selected) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери один варіант відповіді';
+return;
 }
-
+const isCorrect = selected.dataset.correct === 'true';
+if (isCorrect) {
+selected.classList.add('correct');
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Стабільне бокове положення — коли людина дихає.';
+document.querySelectorAll('#s4Task4Options .option').forEach(opt => {
+opt.classList.add('disabled');
+if (opt.dataset.correct === 'true') opt.classList.add('correct');
+});
+addCorrect('step4_task4');
+showToast('🎉 Крок 4 завершено!');
+} else {
+selected.classList.add('incorrect');
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
+}
+}
 function retryS4Task4() {
-  if (progressTracker.answered.has('step4_task4')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s4Task4Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s4Task4Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step4_task4')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s4Task4Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s4Task4Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 // STEP 5
 function checkS5Task1() {
-  const options = document.querySelectorAll('#s5Task1Options .option');
-  const feedback = document.getElementById('s5Task1Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш, що повідомити оператору.';
-    addCorrect('step5_task1');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s5Task1Options .option');
+const feedback = document.getElementById('s5Task1Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш, що повідомити оператору.';
+addCorrect('step5_task1');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS5Task1() {
-  if (progressTracker.answered.has('step5_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s5Task1Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s5Task1Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step5_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s5Task1Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s5Task1Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS5Task2() {
-  const options = document.querySelectorAll('#s5Task2Options .option');
-  const feedback = document.getElementById('s5Task2Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш, коли викликати ЕМД.';
-    addCorrect('step5_task2');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s5Task2Options .option');
+const feedback = document.getElementById('s5Task2Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш, коли викликати ЕМД.';
+addCorrect('step5_task2');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS5Task2() {
-  if (progressTracker.answered.has('step5_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s5Task2Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s5Task2Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step5_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s5Task2Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s5Task2Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS5Task3() {
-  const options = document.querySelectorAll('#s5Task3Options .option');
-  const feedback = document.getElementById('s5Task3Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш про відповідальність за хибні виклики.';
-    addCorrect('step5_task3');
-    showToast('🎉 Крок 5 завершено!');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s5Task3Options .option');
+const feedback = document.getElementById('s5Task3Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Ти знаєш про відповідальність за хибні виклики.';
+addCorrect('step5_task3');
+showToast('🎉 Крок 5 завершено!');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS5Task3() {
-  if (progressTracker.answered.has('step5_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s5Task3Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s5Task3Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step5_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s5Task3Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s5Task3Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 // STEP 6
 function checkS6Task1() {
-  const tfItems = document.querySelectorAll('#s6Task1TF .tf-item');
-  const feedback = document.getElementById('s6Task1Feedback');
-  feedback.style.display = 'block';
-  let allSelected = true;
-  let allCorrect = true;
-  tfItems.forEach((item, idx) => {
-    const selected = item.querySelector('.tf-option.selected');
-    if (!selected) { allSelected = false; return; }
-    const isCorrect = selected.dataset.correct === 'true';
-    if (isCorrect) selected.classList.add('correct');
-    else {
-      selected.classList.add('incorrect');
-      allCorrect = false;
-      item.querySelectorAll('.tf-option').forEach(opt => {
-        if (opt.dataset.correct === 'true') opt.classList.add('correct');
-      });
-    }
-    selected.classList.remove('selected');
-  });
-  if (!allSelected) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери відповідь для кожного твердження!';
-    return;
-  }
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Чудово!</strong> Ти правильно визначив(ла) всі твердження.';
-    addCorrect('step6_task1');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Є помилки.</strong> Правильні варіанти виділено зеленим.';
-    tfItems.forEach(item => {
-      item.querySelectorAll('.tf-option').forEach(opt => {
-        opt.classList.remove('correct', 'incorrect');
-      });
-    });
-  }
+const tfItems = document.querySelectorAll('#s6Task1TF .tf-item');
+const feedback = document.getElementById('s6Task1Feedback');
+feedback.style.display = 'block';
+let allSelected = true;
+let allCorrect = true;
+tfItems.forEach((item, idx) => {
+const selected = item.querySelector('.tf-option.selected');
+if (!selected) { allSelected = false; return; }
+const isCorrect = selected.dataset.correct === 'true';
+if (isCorrect) selected.classList.add('correct');
+else {
+selected.classList.add('incorrect');
+allCorrect = false;
+item.querySelectorAll('.tf-option').forEach(opt => {
+if (opt.dataset.correct === 'true') opt.classList.add('correct');
+});
 }
-
+selected.classList.remove('selected');
+});
+if (!allSelected) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери відповідь для кожного твердження!';
+return;
+}
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Чудово!</strong> Ти правильно визначив(ла) всі твердження.';
+addCorrect('step6_task1');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Є помилки.</strong> Правильні варіанти виділено зеленим.';
+tfItems.forEach(item => {
+item.querySelectorAll('.tf-option').forEach(opt => {
+opt.classList.remove('correct', 'incorrect');
+});
+});
+}
+}
 function retryS6Task1() {
-  if (progressTracker.answered.has('step6_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s6Task1TF .tf-option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect');
-  });
-  document.getElementById('s6Task1Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step6_task1')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s6Task1TF .tf-option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect');
+});
+document.getElementById('s6Task1Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS6Task2() {
-  const options = document.querySelectorAll('#s6Task2Options .option');
-  const feedback = document.getElementById('s6Task2Feedback');
-  feedback.style.display = 'block';
-  const selected = Array.from(options).filter(o => o.classList.contains('selected'));
-  if (selected.length === 0) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
-    return;
-  }
-  let allCorrect = true;
-  options.forEach(opt => {
-    const shouldBeSelected = opt.dataset.correct === 'true';
-    const isSelected = opt.classList.contains('selected');
-    if (shouldBeSelected && isSelected) opt.classList.add('correct');
-    else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
-    else if (shouldBeSelected && !isSelected) allCorrect = false;
-    opt.classList.add('disabled');
-  });
-  if (allCorrect) {
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Одноразові рукавички та маска — засоби особистої безпеки.';
-    addCorrect('step6_task2');
-  } else {
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
-    options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
-  }
+const options = document.querySelectorAll('#s6Task2Options .option');
+const feedback = document.getElementById('s6Task2Feedback');
+feedback.style.display = 'block';
+const selected = Array.from(options).filter(o => o.classList.contains('selected'));
+if (selected.length === 0) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери хоча б один варіант відповіді';
+return;
 }
-
+let allCorrect = true;
+options.forEach(opt => {
+const shouldBeSelected = opt.dataset.correct === 'true';
+const isSelected = opt.classList.contains('selected');
+if (shouldBeSelected && isSelected) opt.classList.add('correct');
+else if (!shouldBeSelected && isSelected) { opt.classList.add('incorrect'); allCorrect = false; }
+else if (shouldBeSelected && !isSelected) allCorrect = false;
+opt.classList.add('disabled');
+});
+if (allCorrect) {
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Одноразові рукавички та маска — засоби особистої безпеки.';
+addCorrect('step6_task2');
+} else {
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Не зовсім правильно.</strong> Спробуй ще раз.';
+options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'disabled'));
+}
+}
 function retryS6Task2() {
-  if (progressTracker.answered.has('step6_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s6Task2Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s6Task2Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step6_task2')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s6Task2Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s6Task2Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 function checkS6Task3() {
-  const selected = document.querySelector('#s6Task3Options .option.selected');
-  const feedback = document.getElementById('s6Task3Feedback');
-  feedback.style.display = 'block';
-  if (!selected) {
-    feedback.className = 'feedback feedback-warning';
-    feedback.innerHTML = '💡 Обери один варіант відповіді';
-    return;
-  }
-  const isCorrect = selected.dataset.correct === 'true';
-  if (isCorrect) {
-    selected.classList.add('correct');
-    feedback.className = 'feedback feedback-success';
-    feedback.innerHTML = '<strong>✅ Правильно!</strong> Бездіяльність карається суворіше, ніж помилки при наданні допомоги.';
-    document.querySelectorAll('#s6Task3Options .option').forEach(opt => {
-      opt.classList.add('disabled');
-      if (opt.dataset.correct === 'true') opt.classList.add('correct');
-    });
-    addCorrect('step6_task3');
-    showToast('🎉 Крок 6 завершено!');
-  } else {
-    selected.classList.add('incorrect');
-    feedback.className = 'feedback feedback-error';
-    feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
-  }
+const selected = document.querySelector('#s6Task3Options .option.selected');
+const feedback = document.getElementById('s6Task3Feedback');
+feedback.style.display = 'block';
+if (!selected) {
+feedback.className = 'feedback feedback-warning';
+feedback.innerHTML = '💡 Обери один варіант відповіді';
+return;
 }
-
+const isCorrect = selected.dataset.correct === 'true';
+if (isCorrect) {
+selected.classList.add('correct');
+feedback.className = 'feedback feedback-success';
+feedback.innerHTML = '<strong>✅ Правильно!</strong> Бездіяльність карається суворіше, ніж помилки при наданні допомоги.';
+document.querySelectorAll('#s6Task3Options .option').forEach(opt => {
+opt.classList.add('disabled');
+if (opt.dataset.correct === 'true') opt.classList.add('correct');
+});
+addCorrect('step6_task3');
+showToast('🎉 Крок 6 завершено!');
+} else {
+selected.classList.add('incorrect');
+feedback.className = 'feedback feedback-error';
+feedback.innerHTML = '<strong>❌ Неправильно.</strong> Спробуй ще раз.';
+}
+}
 function retryS6Task3() {
-  if (progressTracker.answered.has('step6_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
-  document.querySelectorAll('#s6Task3Options .option').forEach(opt => {
-    opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
-  });
-  document.getElementById('s6Task3Feedback').style.display = 'none';
-  showToast('🔄 Спробуй ще раз');
+if (progressTracker.answered.has('step6_task3')) { showToast('✅ Це завдання вже зараховано!'); return; }
+document.querySelectorAll('#s6Task3Options .option').forEach(opt => {
+opt.classList.remove('selected', 'correct', 'incorrect', 'disabled');
+});
+document.getElementById('s6Task3Feedback').style.display = 'none';
+showToast('🔄 Спробуй ще раз');
 }
-
 // РІЗНЕ
 function rate(skillIndex, rating) {
-  state.selfRatings[skillIndex - 1] = rating;
-  saveProgress();
-  const ratingContainer = document.querySelector(`.star-rating[data-skill="${skillIndex}"]`);
-  if (!ratingContainer) return;
-  const stars = ratingContainer.querySelectorAll('.star');
-  stars.forEach((star, idx) => {
-    if (idx < rating) star.classList.add('active');
-    else star.classList.remove('active');
-  });
-  const activeStar = stars[rating - 1];
-  if (activeStar) {
-    activeStar.style.transform = 'scale(1.3)';
-    setTimeout(() => { activeStar.style.transform = ''; }, 200);
-  }
+state.selfRatings[skillIndex - 1] = rating;
+saveProgress();
+const ratingContainer = document.querySelector(`.star-rating[data-skill="${skillIndex}"]`);
+if (!ratingContainer) return;
+const stars = ratingContainer.querySelectorAll('.star');
+stars.forEach((star, idx) => {
+if (idx < rating) star.classList.add('active');
+else star.classList.remove('active');
+});
+const activeStar = stars[rating - 1];
+if (activeStar) {
+activeStar.style.transform = 'scale(1.3)';
+setTimeout(() => { activeStar.style.transform = ''; }, 200);
 }
-
+}
 function resetProgress() {
-  if (confirm('Ти впевнений(а), що хочеш почати спочатку? Весь прогрес буде скинуто.')) {
-    localStorage.removeItem('section8Progress_v3');
-    progressTracker.correct = 0;
-    progressTracker.total = 0;
-    progressTracker.answered = new Set();
-    for (let i = 1; i <= 7; i++) {
-      stepTracker['step' + i].completed = 0;
-      Object.keys(stepTracker['step' + i].tasks).forEach(k => {
-        stepTracker['step' + i].tasks[k] = false;
-      });
-      stepsCompleted[i] = false;
-    }
-    state.currentStep = 0;
-    state.selfRatings = [0, 0, 0, 0];
-    window.location.reload();
-  }
+if (confirm('Ти впевнений(а), що хочеш почати спочатку? Весь прогрес буде скинуто.')) {
+localStorage.removeItem('section8Progress_v4');
+progressTracker.correct = 0;
+progressTracker.total = 0;
+progressTracker.answered = new Set();
+for (let i = 1; i <= 7; i++) {
+stepTracker['step' + i].completed = 0;
+Object.keys(stepTracker['step' + i].tasks).forEach(k => {
+stepTracker['step' + i].tasks[k] = false;
+});
+stepsCompleted[i] = false;
 }
-
+state.currentStep = 0;
+state.selfRatings = [0, 0, 0, 0];
+window.location.reload();
+}
+}
 function showToast(message, icon = '✅') {
-  const container = document.getElementById('toastContainer');
-  if (!container) return;
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.innerHTML = `<span class="toast-icon">${icon}</span><span class="toast-message">${message}</span>`;
-  container.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add('hiding');
-    setTimeout(() => toast.remove(), 400);
-  }, 4000);
+const container = document.getElementById('toastContainer');
+if (!container) return;
+const toast = document.createElement('div');
+toast.className = 'toast';
+toast.innerHTML = `<span class="toast-icon">${icon}</span><span class="toast-message">${message}</span>`;
+container.appendChild(toast);
+setTimeout(() => {
+toast.classList.add('hiding');
+setTimeout(() => toast.remove(), 400);
+}, 4000);
 }
-
 function showProgressModal() {
-  updateStep8Display();
-  document.getElementById('progressModal').classList.add('active');
-  const totalTasks = 18;
-  let completedTasks = 0;
-  for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
-  const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
-  const accuracy = progressTracker.total > 0
-    ? Math.round((progressTracker.correct / progressTracker.total) * 100) : 0;
-  const completedSteps = Object.values(stepsCompleted).filter(v => v).length;
-  const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
-  el('modalTasks', `${completedTasks}/${totalTasks}`);
-  el('modalCorrect', progressTracker.correct);
-  el('modalSteps', `${completedSteps}/7`);
-  el('modalAccuracy', `${accuracy}%`);
-  el('modalProgressPercent', `${percent}%`);
-  const bar = document.getElementById('modalProgressBar');
-  if (bar) bar.style.width = `${percent}%`;
-  let level = 'Початківець', emoji = '⭐☆☆☆☆';
-  if (percent >= 76) { level = 'Експерт першої допомоги'; emoji = '⭐⭐⭐⭐⭐'; }
-  else if (percent >= 51) { level = 'Дослідник'; emoji = '⭐⭐⭐☆☆'; }
-  else if (percent >= 26) { level = 'Учень'; emoji = '⭐⭐☆☆☆'; }
-  el('modalLevelName', level);
-  el('modalLevelEmoji', emoji);
+updateStep8Display();
+document.getElementById('progressModal').classList.add('active');
+const totalTasks = 17;
+let completedTasks = 0;
+for (let i = 1; i <= 7; i++) completedTasks += stepTracker['step' + i].completed;
+const percent = Math.min(100, Math.round((completedTasks / totalTasks) * 100));
+const accuracy = progressTracker.total > 0
+? Math.round((progressTracker.correct / progressTracker.total) * 100) : 0;
+const completedSteps = Object.values(stepsCompleted).filter(v => v).length;
+const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+el('modalTasks', `${completedTasks}/${totalTasks}`);
+el('modalCorrect', progressTracker.correct);
+el('modalSteps', `${completedSteps}/7`);
+el('modalAccuracy', `${accuracy}%`);
+el('modalProgressPercent', `${percent}%`);
+const bar = document.getElementById('modalProgressBar');
+if (bar) bar.style.width = `${percent}%`;
+let level = 'Початківець', emoji = '⭐☆☆☆☆';
+if (percent >= 76) { level = 'Експерт першої допомоги'; emoji = '⭐⭐⭐⭐⭐'; }
+else if (percent >= 51) { level = 'Дослідник'; emoji = '⭐⭐⭐☆☆'; }
+else if (percent >= 26) { level = 'Учень'; emoji = '⭐⭐☆☆☆'; }
+el('modalLevelName', level);
+el('modalLevelEmoji', emoji);
 }
-
 function showHelpModal() { document.getElementById('helpModal').classList.add('active'); }
-
 function closeModal(modalId) { document.getElementById(modalId).classList.remove('active'); }
-
 document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', function(e) {
-    if (e.target === this) this.classList.remove('active');
-  });
+overlay.addEventListener('click', function(e) {
+if (e.target === this) this.classList.remove('active');
 });
-
+});
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-      modal.classList.remove('active');
-    });
-  }
+if (e.key === 'Escape') {
+document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+modal.classList.remove('active');
 });
-
+}
+});
 document.addEventListener('DOMContentLoaded', function() {
-  loadProgress();
-  goToMainPage();
-  console.log('🩹 Тренажер §8 завантажено');
+loadProgress();
+goToMainPage();
+console.log('🩹 Тренажер §8 завантажено');
 });
 </script>
 </body>
